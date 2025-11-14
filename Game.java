@@ -1,7 +1,8 @@
-// Game.java — Main controller
+// Game.java — Main controller demonstrating polymorphism
 public class Game {
     public static void main(String[] args) {
-        RockPaperScissors game = new RockPaperScissors();
-        game.startGame(); // main game loop
+        GameBase game = new RockPaperScissors(); // Upcasting for polymorphism
+        ((RockPaperScissors) game).startGame();  // Downcast to start game
     }
 }
+
