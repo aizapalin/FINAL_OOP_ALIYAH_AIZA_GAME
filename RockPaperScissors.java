@@ -10,7 +10,6 @@ public class RockPaperScissors extends GameBase {
     // Overridden checkWinner method (polymorphism demonstration)
     @Override
     public String checkWinner(String playerChoice, String computerChoice) {
-        // Simply call parent method to keep output format exactly the same
         return super.checkWinner(playerChoice, computerChoice);
     }
 
@@ -132,4 +131,11 @@ public class RockPaperScissors extends GameBase {
 
         scoreboard.addPlayer(player);
     }
+
+    // Main method — entry point of the program
+    public static void main(String[] args) {
+        GameBase game = new RockPaperScissors(); // Upcasting
+        ((RockPaperScissors) game).startGame();  // Start game
+    }
 }
+
